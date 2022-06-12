@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.0.2/dist/sweetalert2.min.css">  
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <style>
+    #app{
+        background-color:#CFD8DC;      
+    }
+    </style>
+</head>
+<body>
+    <div id="app">
+                <div class="row">
+                    <div class="col m12 card-panel">
+                        <form @submit.prevent="iniciarSesion">
+                            <div class="row">
+                                <div class="col m3">
+                                    <label>Usuario</label>
+                                    <input type="text" v-model="usuario">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col m3">
+                                    <label>Contraseña</label>
+                                    <input type="text" v-model="password">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col m3">
+                                    <button type="submit">
+            
+                                        Iniciar Sesion <v-icon>mdi-security</v-icon>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.js" integrity="sha512-nqIFZC8560+CqHgXKez61MI0f9XSTKLkm0zFVm/99Wt0jSTZ7yeeYwbzyl0SGn/s8Mulbdw+ScCG41hmO2+FKw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.0.2/dist/sweetalert2.all.min.js"></script>
+
+    <script>
+        export default
+        {
+            name: 'Login',
+            data(){
+                return{
+                    usuario:'',
+                    password:''
+                }
+            }
+        }
+    </script>
+</body>
+</html>
